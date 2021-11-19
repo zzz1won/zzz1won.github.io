@@ -9,10 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
 
     <style>
-        body    {
-            background-color: rgb(209, 200, 248);
-        }
-
         .container  {
             background-color: rgb(244, 229, 248);
             color: rgb(27, 27, 29);
@@ -184,69 +180,7 @@
     
 </head>
 <body>
-    <header> <!-- 헤더 -->
-        <div class="title" style="text-align: center;" aria-label="page" href="#intro">Jiwon</div>
-        <div class="container d-flex align-items-center ">
-            <ul class="nav nav-tabs flex-grow-1">
-                <li class="nav-item">
-                  <a class="nav-link active" style = "color: rgb(41, 40, 44);" aria-current="page" href="#"> Main </a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" style = "color: rgb(168, 79, 219);" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Skills</a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" style = "color: rebeccapurple;" href="#skill-lang">Programming Language</a></li>
-                    <li><a class="dropdown-item" style = "color: rebeccapurple;" href="#skill-tool">Program Tools</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" style = "color: rgb(132, 66, 197);" href="#skill-etc">etc</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" style = "color: rgb(168, 79, 219);" href="#project">Projects</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" style = "color: rgb(168, 79, 219);" href="#contact">Contact</a>
-                </li>
-                <!-- <li class="nav-item">
-                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li> -->
-            </ul>
-              <div class = 'bt d-flex'> <!-- 부모가 flex여야 자식들도 flex 관련 내용을 정의할 수 있음-->
-                <input type = 'text' class = 'form-control' placeholder="search">
-                <button class = 'btn btn-link text-light text-decoration-none flex-shrink-0'>sign in</button>
-                <button class = 'btn btn-outline-light text-light text-decoration-none flex-shrink-0' onclick="location.href='./signup.html'">sign up</button>
-            </div>
-<!-- 버튼 설정 해야함!-->
-            <button class = 'btn' data-bs-toggle='offcanvas'data-bs-target='#offcanvas';>
-                <img src = '../images/menu.svg' alt = ''>
-            </button>
-<!-- offcanvas 불러옴 -->
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title ms-3" id="offcanvasLabel" style="color: rgb(145, 58, 231);">Jiwon P</h5>
-      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-        <ul class = 'list-group list-group-flush'>
-            <li Class = 'list-group-item' > Main</li>
-            <li Class = 'list-group-item' href="#skill-lang" > Skills</li>
-            <li Class = 'list-group-item' href="#Projects"> Projects </li>
-            <li Class = 'list-group-item' > Contact</li>
-        </ul>
-        <input type="text" class = 'form-control mt-4 mb-3' placeholder="search" style="border-color: rgb(145, 58, 231,0.5)">
-                        <!-- 'd-grid' : 한줄에 채워 표시할 수 있음 -->
-        <div class='d-grid mb-2'>
-            <button class = 'btn btn-outline-primary' onclick="alterFunction2()"> sign in </button>
-        </div>
-        <div class='d-grid mb-2'>
-            <button class = 'btn btn-primary' onclick="location.href='./signup.html'" > sign up </button>
-        </div>
-    </div>
-  </div>
-
-
-        </div>
-        
-    </header>
+    
     <header id = 'block'>
         <div class="title">
             signup💕 내 마음에 저장
