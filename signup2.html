@@ -7,11 +7,42 @@
     <title>won234567-signup</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Pen+Script&family=Noto+Serif+KR&display=swap" rel="stylesheet">
 
     <style>
+
+        header  { /*헤더 고정*/
+            background-color: rgb(209, 200, 248);
+            height: 132px;
+            width: 100%;        
+            position: relative;   
+            position: fixed;
+            top:0; left: 0;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .title  { 
+            font-size: 50px;
+            font-family: 'Black Han Sans', sans-serif;
+            height: 76px;
+            color: white;
+            padding-top: 8px;
+            margin-bottom: 10px;
+        }
+        .title2  {
+            text-align: center;
+            padding: 20px 10px 20px ;
+            font-family: 'Gugi', cursive;
+            font-size: large;
+            margin-bottom: 50px;
+        }
+
         body    {
             background-color: rgb(244, 229, 248);
-            padding-top: 30px;
+            margin-top: 200px;
+            margin-bottom: 50px;
+            
 
         }
 
@@ -76,17 +107,15 @@
             border: 1.5px solid rgb(203, 130, 212);
         }
 
-        .title  {
-            text-align: center;
-            padding: 10px 10px 20px ;
-            font-family: 'Gugi', cursive;
-            font-size: large;
-        }
-
         #footer {
             text-align: center;
             margin-top: 10px;
             margin-bottom: 10px;
+        }
+
+        .join_form  {
+            padding: 4% 6% 5% 6%;
+            
         }
     </style>
     <script>
@@ -187,7 +216,65 @@
 <body>
     
     <header id = 'block'>
-        <div class="title">
+        <div class="title" style="text-align: center;" aria-label="page" href="#intro">Jiwon</div>
+        <div class="container d-flex align-items-center ">
+            <ul class="nav nav-tabs flex-grow-1">
+                <li class="nav-item">
+                  <a class="nav-link active" style = "color: rgb(41, 40, 44);" aria-current="page" href="./index.html"> Main </a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" style = "color: rgb(168, 79, 219);" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Skills</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" style = "color: rebeccapurple;" href="#skill-lang">Programming Language</a></li>
+                    <li><a class="dropdown-item" style = "color: rebeccapurple;" href="#skill-tool">Program Tools</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" style = "color: rgb(132, 66, 197);" href="#skill-etc">etc</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" style = "color: rgb(168, 79, 219);" href="#project">Projects</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" style = "color: rgb(168, 79, 219);" href="#contact">Contact</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li> -->
+            </ul>
+              <div class = 'bt d-flex'> <!-- 부모가 flex여야 자식들도 flex 관련 내용을 정의할 수 있음-->
+                <input type = 'text' class = 'form-control' placeholder="search">
+                <button class = 'btn btn-link text-light text-decoration-none flex-shrink-0'>sign in</button>
+                <button class = 'btn btn-outline-light text-light text-decoration-none flex-shrink-0' onclick="window.open('./signup.html', '_blank', 'top=140, left=300, width=500px, heigth=800px, resizable=no, directories=no, copyhistory=no, menubar=no, toolbars=no, location=no scrollbars=no');">sign up</button>
+            </div>
+<!-- 버튼 설정 해야함!-->
+            <button class = 'btn' data-bs-toggle='offcanvas'data-bs-target='#offcanvas';>
+                <img src = '../images/menu.svg' alt = ''>
+            </button>
+<!-- offcanvas 불러옴 -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title ms-3" id="offcanvasLabel" style="color: rgb(145, 58, 231);">Jiwon P</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class = 'list-group list-group-flush'>
+            <li Class = 'list-group-item' > Main</li>
+            <li Class = 'list-group-item' href="#skill-lang" > Skills</li>
+            <li Class = 'list-group-item' href="#Projects"> Projects </li>
+            <li Class = 'list-group-item' > Contact</li>
+        </ul>
+        <input type="text" class = 'form-control mt-4 mb-3' placeholder="search" style="border-color: rgb(145, 58, 231,0.5)">
+                        <!-- 'd-grid' : 한줄에 채워 표시할 수 있음 -->
+        <div class='d-grid mb-2'>
+            <button class = 'btn btn-outline-primary' onclick="alterFunction2()"> sign in </button>
+        </div>
+        <div class='d-grid mb-2'>
+            <button class = 'btn btn-primary' onclick="location.href='./signup2.html'" > sign up </button>
+        </div>
+    </div>
+  </div>
+</div>
+        <div class="title2" >
             signup💕 내 마음에 저장
         </div>
     </header>
@@ -314,7 +401,7 @@
     </section>
     <footer id = 'footer'>
         <button type="button" class="btn btn-outline-danger" onclick="alertJoin()"> 💕저장💕 </button>
-        <button type="button" class="btn btn-outline-danger" onclick="window.close()"> 💕닫기💕 </button>
+        <button type="button" class="btn btn-outline-danger" onclick="location.href='./index.html'"> 💕메인으로💕 </button>
 
     </footer>
 </body>
